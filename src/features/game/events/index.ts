@@ -476,6 +476,10 @@ import {
   openRewardBox,
   OpenRewardBoxAction,
 } from "./landExpansion/openRewardBox";
+import {
+  claimBountyBonus,
+  ClaimBountyBonusAction,
+} from "./landExpansion/claimBountyBonus";
 
 export type PlayingEvent =
   | ObsidianExchangedAction
@@ -486,6 +490,7 @@ export type PlayingEvent =
   | SacrificeBearAction
   | SpeedUpCollectible
   | SellBountyAction
+  | ClaimBountyBonusAction
   | FeedMixedAction
   | InstantExpand
   | InstantCookRecipe
@@ -827,6 +832,7 @@ export const PLAYING_EVENTS: Handlers<PlayingEvent> = {
   "minigameItem.bought": buyEventShopItem,
   "rewardBox.acknowledged": acknowledgeRewardBox,
   "rewardBox.opened": openRewardBox,
+  "claim.bountyBoardBonus": claimBountyBonus,
 };
 
 export const PLACEMENT_EVENTS: Handlers<PlacementEvent> = {
